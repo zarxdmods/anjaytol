@@ -524,7 +524,7 @@ body {
     line-height: 1.6;
 }
 
-.stats-container {
+.stat-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
