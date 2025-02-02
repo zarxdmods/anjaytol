@@ -276,6 +276,41 @@ body {
     text-decoration: underline;
 }
 
+/* Container untuk menampung tiga blok */
+.stats-container {
+    display: flex; /* Membuat anak-anaknya (stat-box) menjadi flex items */
+    justify-content: space-between; /* Memberi jarak yang merata antara blok */
+    align-items: center; /* Membuat blok sejajar vertikal di tengah */
+    gap: 20px; /* Jarak antara setiap blok */
+    padding: 20px; /* Padding untuk container */
+    background-color: #f4f4f4; /* Warna latar belakang container */
+    border-radius: 10px; /* Membuat sudut container melengkung */
+}
+
+/* Gaya untuk setiap blok */
+.stat-box {
+    flex: 1; /* Membuat setiap blok memiliki lebar yang sama */
+    text-align: center; /* Teks di tengah blok */
+    padding: 20px; /* Padding dalam blok */
+    background-color: #ffffff; /* Warna latar belakang blok */
+    border-radius: 8px; /* Membuat sudut blok melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk blok */
+}
+
+/* Gaya untuk judul statistik */
+.stat-title {
+    font-size: 18px; /* Ukuran font judul */
+    color: #333333; /* Warna teks judul */
+    margin-bottom: 10px; /* Jarak antara judul dan angka */
+}
+
+/* Gaya untuk angka statistik */
+.stat-count {
+    font-size: 24px; /* Ukuran font angka */
+    font-weight: bold; /* Tebal font angka */
+    color: #007bff; /* Warna teks angka */
+}
+
 .s {
     font-family: 'Georgia', serif;
 }
