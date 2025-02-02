@@ -1,150 +1,3 @@
-scrollRightBtn.addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
-});
-
-
-const snowContainer = document.querySelector('.snow-container');
-
-function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    
-    // Set random size
-    const size = Math.random() * 10 + 5; // ukuran antara 5px hingga 15px
-    snowflake.style.width = `${size}px`;
-    snowflake.style.height = `${size}px`;
-    
-    // Set random position
-    snowflake.style.left = `${Math.random() * 100}vw`;
-    
-    // Set random animation duration
-    const duration = Math.random() * 3 + 2; // durasi antara 2 detik hingga 5 detik
-    snowflake.style.animationDuration = `${duration}s`;
-    
-    // Append snowflake to the container
-    snowContainer.appendChild(snowflake);
-    
-    // Remove snowflake after it falls
-    snowflake.addEventListener('animationend', () => {
-        snowflake.remove();
-    });
-}
-
-// Create snowflakes at intervals
-setInterval(createSnowflake, 300);
-
-function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-const cursor = document.querySelector('.cursor');
-const trail = document.querySelector('.trail');
-let timeout; // Variabel untuk menyimpan timeout
-let isVisible = true; // Status untuk menampilkan atau menyembunyikan cursor dan trail
-
-function updateCursorPosition(x, y) {
-    // Atur posisi cursor
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
-
-    // Atur posisi trail
-    trail.style.left = `${x}px`;
-    trail.style.top = `${y}px`;
-
-    // Tampilkan trail dengan efek fade-in
-    trail.style.opacity = 1;
-    trail.style.transform = 'translate(-50%, -50%) scale(1)'; // Besar saat muncul
-
-    // Hapus timeout sebelumnya jika ada
-    clearTimeout(timeout);
-
-    // Setelah 300ms, sembunyikan trail
-    timeout = setTimeout(() => {
-        trail.style.opacity = 0;
-        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
-    }, 300); // Durasi trail terlihat
-}
-
-// Event untuk touchmove
-document.addEventListener('touchmove', (event) => {
-    if (isVisible) {
-        const touch = event.touches[0]; // Ambil titik sentuh pertama
-        updateCursorPosition(touch.clientX, touch.clientY);
-    }
-});
-
-// Event untuk touchstart
-document.addEventListener('touchstart', (event) => {
-    if (isVisible) {
-        const touch = event.touches[0]; // Ambil titik sentuh pertama
-        updateCursorPosition(touch.clientX, touch.clientY);
-    }
-});
-
-// Event untuk mousemove
-document.addEventListener('mousemove', (event) => {
-    if (isVisible) {
-        updateCursorPosition(event.clientX, event.clientY);
-    }
-});
-
-// Event untuk mousedown
-document.addEventListener('mousedown', (event) => {
-    if (isVisible) {
-        updateCursorPosition(event.clientX, event.clientY);
-    }
-});
-
-// Event untuk touchend dan mouseup
-document.addEventListener('touchend', () => {
-    if (isVisible) {
-        trail.style.opacity = 0;
-        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
-    }
-});
-
-document.addEventListener('mouseup', () => {
-    if (isVisible) {
-        trail.style.opacity = 0;
-        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
-    }
-});
-
-// Event untuk double click
-document.addEventListener('dblclick', () => {
-    isVisible = !isVisible; // Toggle status tampil/tersembunyi
-
-    // Menampilkan atau menyembunyikan cursor dan trail
-    if (isVisible) {
-        cursor.style.display = 'block';
-        trail.style.display = 'block';
-    } else {
-        cursor.style.display = 'none';
-        trail.style.display = 'none';
-    }
-});
-
- function toggleTheme() {
-    const body = document.body;
-    const themeIcon = document.getElementById('theme-icon');
-
-    body.classList.toggle('dark-theme');
-    body.classList.toggle('light-theme');
-
-    if (body.classList.contains('dark-theme')) {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-    }
-}
-
-// Set default theme
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('light-theme');
-});
-
 const tele = 'data:image/png;base64,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'
 const ig = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBPbEdSyZrjNPqoAeroD0go1aOOes-JJv8v1jYwWSD-Zd10JR3&s'
 const fb = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa3qskp70YrxHrZfWJ58W1XhM1xaoO7A1tI9Eio34n1ZqS5es&s'
@@ -472,3 +325,36 @@ document.getElementById("product-detail-overlay").addEventListener('transitionen
         overlayContent.scrollTop = 0;
     }
 });
+         // Store hours check
+      const openHour = 8;
+      const closeHour = 23;
+      function updateStoreStatus() {
+        const now = new Date();
+        const currentHour = now.getHours();
+        const storeStatus = document.getElementById("storeStatus");
+        let isStoreOpen = false;
+
+        if (currentHour >= openHour && currentHour < closeHour) {
+          storeStatus.textContent = "Toko sedang buka";
+          storeStatus.classList.add("open");
+          storeStatus.classList.remove("closed");
+          isStoreOpen = true;
+        } else {
+          storeStatus.textContent = "Toko sedang tutup";
+          storeStatus.classList.add("closed");
+          storeStatus.classList.remove("open");
+        }
+        return isStoreOpen;
+      }
+
+      window.onload = function() {
+        const storeStatus = document.getElementById('storeStatus');
+        const isStoreOpen = updateStoreStatus();
+        if (!isStoreOpen) {
+          storeStatus.style.backgroundColor = '#f2dede';
+          storeStatus.style.color = '#a94442';
+        } else {
+          storeStatus.style.backgroundColor = '#dff0d8';
+          storeStatus.style.color = '#3c763d';
+        }
+      };
