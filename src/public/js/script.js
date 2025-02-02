@@ -98,7 +98,7 @@ const products = [
     {
         id: 5,
         name: "SEWA BOT MD",
-        price: 40000,
+        price: 10000,
         image: "https://f.uguu.se/LtoAgnfx.jpg",
         description: "sewa bot md bisa menjaga group",
         author: "ZarxdMods",
