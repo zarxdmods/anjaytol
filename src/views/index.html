@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://f.uguu.se/LtoAgnfx.jpg" rel="icon">
+    <link href="https://f.uguu.se/LtoAgnfx.jpg" rel="apple-touch-icon">
+    <title>Zarxd Pedia | Semua Kebutuhan Digital</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+      <!-- Toko Status -->
+    <div class="store-status" id="storeStatus">
+        Toko sedang tutup
+    </div>
+      <div class="cursor"></div>   
+    <main>
+        <section class="store-info">
+            <div class="logo-container">
+                <img src="https://f.uguu.se/LtoAgnfx.jpg" alt="Store Logo">
+                <div class="store-text">
+                    <h1 class="s">Zarxd Pedia</h1>
+                    <p class="store-additional-info">Digital Elektronik</p>
+                    <a href="#" class="store-detail">Detail Toko ></a>
+                </div>
+            </div>
+            <a href="https://wa.me/6283830399871?text=" class="whatsapp-link" aria-label="Contact via WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+                      <i id="theme-icon" class="fas fa-moon theme-toggle" onclick="toggleTheme()"></i>
+        </section>
+        <section class="search-container">
+    <div class="search-bar">
+        <input type="text" id="search-trigger" placeholder="Cari Produk..." readonly>
+        <button class="btn" id="search-trigger-btn">Search</button>
+    </div>
+    <p class="upload-text">
+        ingin upload dagangan mu di Zarxd Pedia? <a href="#" class="upload-link">klik disini</a>
+    </p>
+</section>
+
+<div class="green-background-container">
+    <p class="description">
+        Zarxd Pedia adalah platform digital terpercaya untuk semua kebutuhan elektronik Anda. Temukan berbagai produk berkualitas dari para penjual terpercaya.
+    </p>
+    
+    <div class="stats-container">
+        <div class="stat-box">
+            <h3 class="stat-title">Total Penjual</h3>
+            <p id="seller-count" class="stat-count">0</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="stat-title">Total Produk</h3>
+            <p id="sales-count" class="stat-count">0</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="stat-title">Total Terjual</h3>
+            <p id="sell" class="stat-count">0</p>
+        </div>
+    </div>
+</div>
+
+        <h2 class="product-title">Semua Produk Yang Tersedia</h2>
+        <section class="products">
+            <!-- Product list will be generated here using JavaScript -->
+        </section>
+    </main>
+    
+    <div id="product-detail-overlay" class="overlay">
+    <div id="product-detail-content" class="overlay-content">
+        <button id="close-detail" class="close-button">&times;</button>
+        <div id="product-detail"></div>
+    </div>
+</div>
+    
+  <div id="payment-menu" class="payment-menu">
+  <div class="payment-menu-content">
+    <h3>Hubungi Penjual Melalui</h3>
+      <div id="payment" class="payment-opsi"></div>
+  </div>
+</div>
+
+<div id="search-overlay" class="search-overlay">
+    <div class="search-content">
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <button id="back-button" class="back-button">
+    <i class="fas fa-chevron-left"></i>
+</button>
+                <input type="text" id="search-input" placeholder="Sc Xbot...">
+                <button id="search-button" class="btn">Search</button>
+            </div>
+        </div>
+        <div id="search-results" class="search-results"></div>
+    </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>Tentang Kami</h3>
+      <p>Zarxd Pedia Merupakan Project Yang Dikerjakan Oleh Satu Orang Saja Dan Dibuat Untuk Menjadi Pusat Ataupun Jembatan Bagi Para Pebisnis Produk Digital Elektronik Untuk Memperkenalkan Produknya Kepada Khalayak Umum Tanpa Susah-Susah Promosi, Jadi Apakah Anda Punya Usaha? Segera Uploade Di Shannz Store Dan Anda Cukup Menunggu Pelanggan Membeli.</p>
+    </div>
+     <div class="footer-section contact">
+      <h3>Important Warning</h3>
+      <p>Harap Di Ketahui Bahwa Harga & Kualitas Disetiap Produk Merupakan Informasi Dari Penjual, Jikalau Ada Yang Mengalami Penipuan Atau Produk Tidak Sesuai Shann Store Menyatakan Tidak Bertanggung Jawab, Namun Anda Dapat Melaporkan Hal Tersebut Ke Shann Store Agar Saya Dapat Menindak Lanjuti Produk Dan Penjual Tersebut.</p>
+    </div>
+    <div class="footer-section links">
+      <h3>Tautan Cepat</h3>
+      <ul>
+        <li><a href="https://zarxd.my.id">Beranda</a></li>
+        <li><a href="https://www.tiktok.com/zarxdmods">Tiktok</a></li>
+        <li><a href="https://www.instagram.com/zarxdmods">instagram</a></li>
+        <li><a href="https://zarxd.pedia.pw/">Website Top Up</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h3>Hubungi Kami</h3>
+      <p><i class="fas fa-phone"></i> +62 838-3039-9871</p>
+      <p><i class="fas fa-envelope"></i> zarxdmods@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://wa.me/6283830399871?text=" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/zarxdmods" title="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://zarxd.xyz" title="Toko Kami"><i class="fas fa-store"></i></a>
+        <a href="https://zarxd.pedia.pw/" title="API"><i class="fas fa-code"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 ZarxdMods. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
