@@ -325,6 +325,46 @@ document.getElementById("product-detail-overlay").addEventListener('transitionen
         overlayContent.scrollTop = 0;
     }
 });
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
+
+// Optional: Save user preference in localStorage
+function saveThemePreference() {
+    const body = document.body;
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+}
+
+function loadThemePreference() {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        body.classList.remove('dark-mode');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
+
+// Load theme preference when the page loads
+window.onload = loadThemePreference;
          // Store hours check
       const openHour = 8;
       const closeHour = 23;
