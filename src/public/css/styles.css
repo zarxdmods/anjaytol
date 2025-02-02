@@ -281,32 +281,34 @@ body {
     display: flex; /* Membuat anak-anaknya (stat-box) menjadi flex items */
     justify-content: space-between; /* Memberi jarak yang merata antara blok */
     align-items: center; /* Membuat blok sejajar vertikal di tengah */
-    gap: 20px; /* Jarak antara setiap blok */
-    padding: 20px; /* Padding untuk container */
+    gap: 10px; /* Jarak antara setiap blok diperkecil */
+    padding: 10px; /* Padding untuk container diperkecil */
     background-color: #f4f4f4; /* Warna latar belakang container */
-    border-radius: 10px; /* Membuat sudut container melengkung */
+    border-radius: 8px; /* Membuat sudut container melengkung */
+    max-width: 600px; /* Lebar maksimum container (opsional) */
+    margin: 0 auto; /* Membuat container berada di tengah */
 }
 
 /* Gaya untuk setiap blok */
 .stat-box {
     flex: 1; /* Membuat setiap blok memiliki lebar yang sama */
     text-align: center; /* Teks di tengah blok */
-    padding: 20px; /* Padding dalam blok */
+    padding: 15px; /* Padding dalam blok diperkecil */
     background-color: #ffffff; /* Warna latar belakang blok */
-    border-radius: 8px; /* Membuat sudut blok melengkung */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk blok */
+    border-radius: 6px; /* Membuat sudut blok melengkung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk blok diperkecil */
 }
 
 /* Gaya untuk judul statistik */
 .stat-title {
-    font-size: 18px; /* Ukuran font judul */
+    font-size: 14px; /* Ukuran font judul diperkecil */
     color: #333333; /* Warna teks judul */
-    margin-bottom: 10px; /* Jarak antara judul dan angka */
+    margin-bottom: 5px; /* Jarak antara judul dan angka diperkecil */
 }
 
 /* Gaya untuk angka statistik */
 .stat-count {
-    font-size: 24px; /* Ukuran font angka */
+    font-size: 18px; /* Ukuran font angka diperkecil */
     font-weight: bold; /* Tebal font angka */
     color: #007bff; /* Warna teks angka */
 }
