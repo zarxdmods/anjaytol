@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffffff;
+    background-color: #ffff;
     color: #000000;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -296,12 +296,12 @@ body {
 }
 
 .products {
-    background: #ffffffff;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 0 20px;
     margin-top: 10px;
+    background: #ffff;
 }
 
 .products div {
