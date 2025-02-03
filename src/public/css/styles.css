@@ -304,8 +304,7 @@ body {
 }
 
 .products div {
-    background: #ffff;
-    border: 1px solid #ccc;
+    border: 1px solid #ffff;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
