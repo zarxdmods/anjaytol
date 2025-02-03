@@ -38,7 +38,7 @@ const products = [
         id: 2,
         name: "Jasa Pembuatan Website",
         price: 40000,
-        image: "https://d.uguu.se/DwOdyBHP.jpg",
+        image: "https://files.catbox.moe/efogwi.jpg",
         description: "Pembuatan website ini untuk mempromosikan dagangan atau yang kita jual.",
         author: "ZarxdMods",
         features: [
@@ -78,7 +78,7 @@ const products = [
             id: 4,
         name: "NOMOR KOSONG ( NOKOS )",
         price: 5000,
-        image: "https://f.uguu.se/zMMtbmUK.jpg",
+        image: "https://files.catbox.moe/e67688.jpg",
         description: "NOMOR KOSONG NI BERFUNGSI UNTUK KEPERLUAN LAINNYA ATAU BUAT BOT WA.",
         author: "Zarxd Pedia",
         features: [
@@ -99,7 +99,7 @@ const products = [
         id: 5,
         name: "SEWA BOT MD",
         price: 10000,
-        image: "https://f.uguu.se/LtoAgnfx.jpg",
+        image: "https://files.catbox.moe/e67688.jpg",
         description: "sewa bot md bisa menjaga group",
         author: "ZarxdMods",
         features: [
