@@ -399,3 +399,46 @@ window.onload = loadThemePreference;
         }
       };
 
+// Fungsi Jam Digital
+function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Fungsi Mendapatkan IP Address
+fetch("https://api64.ipify.org?format=json")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("ip-address").innerText = data.ip;
+    })
+    .catch(() => {
+        document.getElementById("ip-address").innerText = "Gagal Memuat";
+    });
+
+// Fungsi Status Baterai
+if (navigator.getBattery) {
+    navigator.getBattery().then(battery => {
+        function updateBatteryStatus() {
+            let level = Math.round(battery.level * 100);
+            let charging = battery.charging ? "Mengisi Daya" : "Tidak Mengisi";
+            document.getElementById("battery-status").innerText = `${level}% - ${charging}`;
+        }
+        updateBatteryStatus();
+        battery.addEventListener("chargingchange", updateBatteryStatus);
+        battery.addEventListener("levelchange", updateBatteryStatus);
+    });
+} else {
+    document.getElementById("battery-status").innerText = "Tidak Didukung";
+}
+
+// Fungsi Suhu Perangkat (Hanya Tersedia di Beberapa Perangkat)
+if (navigator.deviceMemory) {
+    document.getElementById("temperature").innerText = `Perkiraan RAM: ${navigator.deviceMemory}GB`;
+} else {
+    document.getElementById("temperature").innerText = "Tidak Tersedia";
+}
