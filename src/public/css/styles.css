@@ -527,7 +527,7 @@ body {
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #000000, #ffff);
+    background: linear-gradient(135deg);
     color: #fff;
     margin: 0;
     padding: 20px;
