@@ -27,6 +27,22 @@ body {
     padding: 0;
 }
 
+.navbar-brand {
+    font-size: 1.5rem; /* Ukuran font */
+    font-weight: bold; /* Tebal */
+    text-decoration: none; /* Hilangkan garis bawah */
+    background: linear-gradient(90deg, #ff6a00, #ee0979); /* Gradasi warna */
+    -webkit-background-clip: text; /* Memotong latar belakang untuk teks */
+    -webkit-text-fill-color: transparent; /* Mengisi warna teks dengan transparan */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transisi saat hover */
+}
+
+/* Efek hover */
+.navbar-brand:hover {
+    transform: scale(1.1); /* Efek membesar saat hover */
+    color: #fff; /* Ubah warna teks saat hover */
+}
+
 /* Toko Status */
 .store-status {
   background-color: #ffe0e0;
