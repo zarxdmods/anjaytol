@@ -524,19 +524,9 @@ body {
     line-height: 1.6;
 }
 
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-}
-
 /* Info Box */
 .info-box {
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background: linear-gradient(135deg, #ffff, #ffff);
     color: white;
     padding: 20px;
     margin: 15px auto;
