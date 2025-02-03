@@ -399,16 +399,3 @@ window.onload = loadThemePreference;
         }
       };
 
-function updateJam() {
-    const sekarang = new Date();
-    const jam = sekarang.getHours().toString().padStart(2, '0');
-    const menit = sekarang.getMinutes().toString().padStart(2, '0');
-    const detik = sekarang.getSeconds().toString().padStart(2, '0');
-
-    document.getElementById('jam').textContent = jam;
-    document.getElementById('menit').textContent = menit;
-    document.getElementById('detik').textContent = detik;
-}
-
-setInterval(updateJam, 1000);
-updateJam(); // Panggil fungsi sekali untuk menginisialisasi jam saat halaman dimuat
