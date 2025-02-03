@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ddd;
+    background-color: #ffffffff;
     color: #000000;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -537,7 +537,7 @@ h2 {
 }
 
 h3 {
-    margin-bottom: 5px;
+    margin-bottom: 18px;
 }
 
 p {
