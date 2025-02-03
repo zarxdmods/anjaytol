@@ -527,11 +527,13 @@ body {
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #ffff);
     color: #fff;
     margin: 0;
     padding: 20px;
     text-align: center;
 }
+
 /* Info Box */
 .info-box {
     background: linear-gradient(135deg, #ffff, #ffff);
