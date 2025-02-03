@@ -22,9 +22,9 @@ body.dark-mode {
 }
 
 body {
-  background-color: black;
-  color: #333;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-brand {
@@ -41,12 +41,6 @@ body {
 .navbar-brand:hover {
     transform: scale(1.1); /* Efek membesar saat hover */
     color: #fff; /* Ubah warna teks saat hover */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 /* Toko Status */
