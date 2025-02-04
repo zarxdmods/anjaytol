@@ -556,24 +556,6 @@ body {
     }
 }
 
-#footer .copyright {
-  border-top: 1px solid #010479;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
 .stat-box {
     text-align: center;
     background: white;
@@ -595,6 +577,11 @@ body {
     color: #007bff;
 }
 
+#footer .copyright {
+  border-top: 1px solid #010479;
+  text-align: center;
+  padding-top: 30px;
+}
 
 #footer .credits {
   padding-top: 10px;
