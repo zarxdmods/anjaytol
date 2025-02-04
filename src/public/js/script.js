@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, stepTime);
     }
 
-    animateCount("seller-count", 0, sellerCount, 2000);
-    animateCount("sales-count", 0, productCount, 2000);
-    animateCount("sell", 0, salesCount, 2000);
+    animateCount("seller-count", 24, sellerCount, 4000);
+    animateCount("sales-count", 28, productCount, 4000);
+    animateCount("sell", 56, salesCount, 4000);
 });
