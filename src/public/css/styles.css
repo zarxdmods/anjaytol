@@ -118,6 +118,49 @@ body {
     text-decoration: underline;
 }
 
+.banner {
+    background-image: url('https://files.catbox.moe/jef2ir.jpg'); /* Ganti dengan gambar banner Anda */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparan */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.banner-content button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content button:hover {
+    background-color: #e64a19;
+}
+
 .whatsapp-link {
     display: flex;
     align-items: center;
