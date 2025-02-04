@@ -429,9 +429,9 @@ window.onload = loadThemePreference;
 
 document.addEventListener("DOMContentLoaded", function () {
     // Simulasi data, bisa diganti dengan data dari API atau backend
-    let sellerCount = 120; 
-    let productCount = 450;
-    let salesCount = 3200;
+    let sellerCount = 24; 
+    let productCount = 28;
+    let salesCount = 56;
 
     // Animasi angka naik
     function animateCount(id, start, end, duration) {
@@ -448,7 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, stepTime);
     }
 
-    animateCount("seller-count", 24, sellerCount, 4000);
-    animateCount("sales-count", 28, productCount, 4000);
-    animateCount("sell", 56, salesCount, 4000);
+    animateCount("seller-count", 0, sellerCount, 4000);
+    animateCount("sales-count", 0, productCount, 4000);
+    animateCount("sell", 0, salesCount, 4000);
 });
