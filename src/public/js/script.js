@@ -442,3 +442,25 @@ if (navigator.deviceMemory) {
 } else {
     document.getElementById("temperature").innerText = "Tidak Tersedia";
 }
+
+        const snowContainer = document.querySelector('.snow-container');
+
+        function createSnow() {
+            const snow = document.createElement('div');
+            snow.className = 'snow';
+            snow.style.left = Math.random() * 100 + 'vw'; // Posisi horizontal acak
+            snow.style.animationDuration = Math.random() * 3 + 2 + 's'; // Durasi jatuh acak
+            snow.style.opacity = Math.random(); // Opasitas acak
+            snow.style.width = Math.random() * 10 + 5 + 'px'; // Ukuran acak
+            snow.style.height = snow.style.width; // Membuat salju tetap bulat
+            snowContainer.appendChild(snow);
+
+            // Hapus salju setelah selesai animasi
+            setTimeout(() => {
+                snow.remove();
+            }, 5000); // Sesuaikan dengan durasi animasi
+        }
+
+        // Generate banyak salju
+        setInterval(createSnow, 100); // Interval pembuatan salju
+  
