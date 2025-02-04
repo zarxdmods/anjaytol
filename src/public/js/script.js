@@ -398,3 +398,31 @@ window.onload = loadThemePreference;
           storeStatus.style.color = '#3c763d';
         }
       };
+
+        function buatSalju() {
+            const container = document.getElementById("effetsalju");
+
+            for (let i = 0; i < 100; i++) { // Jumlah butiran salju
+                let salju = document.createElement("div");
+                salju.classList.add("salju");
+
+                let ukuran = Math.random() * 5 + 2; // Ukuran antara 2px - 7px
+                let durasi = Math.random() * 5 + 5; // Durasi jatuh 5 - 10 detik
+                let posisi = Math.random() * 100; // Posisi horizontal
+
+                salju.style.width = ukuran + "px";
+                salju.style.height = ukuran + "px";
+                salju.style.left = posisi + "vw";
+                salju.style.animationDuration = durasi + "s";
+                salju.style.animationDelay = Math.random() * 5 + "s"; // Delay acak
+
+                container.appendChild(salju);
+
+                // Hapus elemen setelah animasi selesai
+                setTimeout(() => {
+                    salju.remove();
+                }, durasi * 1000);
+            }
+        }
+
+        setInterval(buatSalju, 2000); // Membuat salju setiap 2 detik
