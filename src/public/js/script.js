@@ -426,3 +426,29 @@ window.onload = loadThemePreference;
         }
 
         setInterval(buatSalju, 2000); // Membuat salju setiap 2 detik
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Simulasi data, bisa diganti dengan data dari API atau backend
+    let sellerCount = 120; 
+    let productCount = 450;
+    let salesCount = 3200;
+
+    // Animasi angka naik
+    function animateCount(id, start, end, duration) {
+        let obj = document.getElementById(id);
+        let range = end - start;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        
+        let timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) clearInterval(timer);
+        }, stepTime);
+    }
+
+    animateCount("seller-count", 0, sellerCount, 2000);
+    animateCount("sales-count", 0, productCount, 2000);
+    animateCount("sell", 0, salesCount, 2000);
+});
