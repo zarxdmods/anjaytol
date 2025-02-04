@@ -280,27 +280,40 @@ body {
     font-family: 'Georgia', serif;
 }
 
-/* Product Title */
 .product-title {
-    font-size: 28px;
+    /* Menghilangkan margin dan padding */
+    margin: 0;
+    padding: 0;
+
+    /* Menghilangkan border */
+    border: none;
+
+    /* Mengatur ukuran dan jenis font */
+    font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    padding: 15px;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(255, 117, 140, 0.3);
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 500px;
-    margin: 20px auto;
+
+    /* Memberikan efek warna-warni pada teks */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff6a6a, #ffcc70, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    /* Animasi untuk efek gradient yang bergerak */
+    background-size: 200% auto;
+    animation: gradientText 5s linear infinite;
 }
 
-.product-title:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255, 117, 140, 0.6);
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .tityd {
