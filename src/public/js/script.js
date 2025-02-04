@@ -452,3 +452,7 @@ document.addEventListener("DOMContentLoaded", function () {
     animateCount("sales-count", 0, productCount, 4000);
     animateCount("sell", 0, salesCount, 4000);
 });
+
+document.getElementById('shopNowBtn').addEventListener('click', function() {
+    window.location.href = 'https://zarxd.xyz'; // Ganti dengan URL toko Anda
+});
