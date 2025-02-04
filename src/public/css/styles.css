@@ -556,6 +556,11 @@ body {
     }
 }
 
+.stat-container {
+    display: flex; /* Menjadikan box sejajar ke samping */
+    gap: 20px; /* Memberikan jarak antar box */
+}
+
 .stat-box {
     text-align: center;
     background: white;
