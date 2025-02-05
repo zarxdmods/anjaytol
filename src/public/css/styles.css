@@ -118,28 +118,84 @@ body {
     text-decoration: underline;
 }
 
-.whatsapp-link {
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.floating-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #25D366;
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
+    cursor: pointer;
     font-size: 24px;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.whatsapp-link:hover {
-    background-color: #128C7E;
+.floating-button:hover {
+    background-color: #000000;
+    transform: scale(1.1);
 }
 
+.cart-button {
+    bottom: 80px;
+    right: 20px;
+}
+
+.feedback-button {
+    bottom: 20px;
+    right: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+    }
 .search-container {
     text-align: center;
     margin-bottom: 20px;
@@ -374,47 +430,6 @@ body {
     overflow: hidden;
 }
 
-/* Styling untuk tombol penutup */
-.close-button {
-    /* Mengatur ukuran tombol */
-    width: 50px;
-    height: 50px;
-
-    /* Mengatur warna latar belakang dan warna teks */
-    background-color: #ff4d4d; /* Warna merah untuk menandakan aksi "tutup" */
-    color: white; /* Warna putih untuk ikon "×" */
-
-    /* Mengatur border agar tidak ada garis tepi */
-    border: none;
-
-    /* Mengatur radius sudut untuk tampilan yang lebih halus */
-    border-radius: 50%; /* Bentuk lingkaran */
-
-    /* Mengatur font untuk ikon "×" */
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 30px; /* Memastikan ikon berada di tengah secara vertikal */
-    text-align: center;
-
-    /* Mengatur efek hover */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-    /* Menambahkan bayangan untuk efek 3D */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Efek saat tombol dihover */
-.close-button:hover {
-    background-color: #e74c3c; /* Warna merah lebih gelap */
-    transform: scale(1.1); /* Efek membesar sedikit */
-}
-
-/* Efek saat tombol ditekan */
-.close-button:active {
-    background-color: #c0392b; /* Warna merah lebih gelap lagi */
-    transform: scale(0.95); /* Efek mengecil sedikit */
-}
 
 .overlay-content {
     position: absolute;
