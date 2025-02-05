@@ -664,6 +664,35 @@ body {
     transform: translate(-50%, -50%) scale(0.5); /* Kecil saat tidak terlihat */
 }
 
+/* Container untuk overlay loading */
+.loading-overlay {
+  position: fixed; /* Tetap di tempat saat di-scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  z-index: 1000; /* Pastikan overlay di atas elemen lain */
+}
+
+/* Animasi loading */
+.loading {
+  font-size: 48px; /* Ukuran emoji atau teks */
+  animation: spin 1s linear infinite; /* Animasi putar */
+}
+
+/* Keyframes untuk animasi putar */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 #footer .copyright {
   border-top: 1px solid #010479;
