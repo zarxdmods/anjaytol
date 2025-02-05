@@ -591,5 +591,3 @@ function startAnimation() {
         overlay.classList.remove('active'); // Sembunyikan overlay
     }, totalDuration);
 }
-
-startAnimation();
