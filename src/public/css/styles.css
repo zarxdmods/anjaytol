@@ -374,28 +374,46 @@ body {
     overflow: hidden;
 }
 
+/* Styling untuk tombol penutup */
 .close-button {
-    position: sticky;
-    top: 20px;
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 24px;
+    /* Mengatur ukuran tombol */
+    width: 30px;
+    height: 30px;
+
+    /* Mengatur warna latar belakang dan warna teks */
+    background-color: #ff4d4d; /* Warna merah untuk menandakan aksi "tutup" */
+    color: white; /* Warna putih untuk ikon "×" */
+
+    /* Mengatur border agar tidak ada garis tepi */
     border: none;
+
+    /* Mengatur radius sudut untuk tampilan yang lebih halus */
+    border-radius: 50%; /* Bentuk lingkaran */
+
+    /* Mengatur font untuk ikon "×" */
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px; /* Memastikan ikon berada di tengah secara vertikal */
+    text-align: center;
+
+    /* Mengatur efek hover */
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1002;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    /* Menambahkan bayangan untuk efek 3D */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Efek saat tombol dihover */
 .close-button:hover {
-    background-color: #45a049;
+    background-color: #e74c3c; /* Warna merah lebih gelap */
+    transform: scale(1.1); /* Efek membesar sedikit */
+}
+
+/* Efek saat tombol ditekan */
+.close-button:active {
+    background-color: #c0392b; /* Warna merah lebih gelap lagi */
+    transform: scale(0.95); /* Efek mengecil sedikit */
 }
 
 .overlay-content {
