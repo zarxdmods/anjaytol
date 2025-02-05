@@ -29,7 +29,7 @@ const products = [
              {
                logo: wa,
                description: waD,
-               link: 'https://wa.me/6282259866266?text=HALLO+BG+SAYA+INGIN+MEMBELI+BARANG+CAPCUT+PRO'
+               link: 'https://wa.me/6282259866266?text=HALLO+BG+SAYA+INGIN+MEMBELI+BARANG+CAPCUT+PREMIUM'
             },
         ]
     },
