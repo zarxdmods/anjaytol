@@ -29,7 +29,7 @@ const products = [
              {
                logo: wa,
                description: waD,
-               link: 'https://wa.me/6283830399871?text=HALLO+MIN+SAYA+INGIN+MEMBELI+BARANG+PANEL'
+               link: 'https://wa.me/6282259866266?text=HALLO+BG+SAYA+INGIN+MEMBELI+BARANG+CAPCUT+PRO'
             },
         ]
     },
@@ -50,7 +50,7 @@ const products = [
              {
                logo: wa,
                description: waD,
-               link: 'https://wa.me/6282259866266?text=HALLO+BG+SAYA+INGIN+MEMBELI+BARANG+CAPCUT+PRO'
+               link: 'https://wa.me/6283830399871?text=HALLO+MIN+SAYA+INGIN+MEMBELI+BARANG+PANEL'
             },
         ]
     },
