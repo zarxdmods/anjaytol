@@ -89,9 +89,14 @@
     </div>
 </div>
 
-                <a href="https://wa.me/6283830399871?text=HALLO+MIN😊" class="whatsapp-link" aria-label="Contact via WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFeedback()">&times;</span>
+            <h2>Masukkan Feedback</h2>
+            <textarea id="feedbackMessage" placeholder="Ketik disini .."></textarea>
+            <button onclick="sendFeedback()">Kirim</button>
+        </div>
+    </div>
 
     <script src="/js/script.js"></script>
     <div class="container">
