@@ -543,3 +543,53 @@ document.addEventListener('dblclick', () => {
         trail.style.display = 'none';
     }
 });
+
+
+function startAnimation() {
+    const container = document.querySelector('.container'); // Elemen yang ingin di-blur
+    const loading = document.querySelector('.loading')
+    const overlay = document.querySelector('.loading-overlay');
+        loading.addEventListener('click', () => {
+            // Efek goyang
+            gsap.to(loading, {
+                duration: 1.5,
+                x: 5,
+                y: -5,
+                ease: "power1.inOut",
+                repeat: 1,
+                yoyo: true
+            });
+        });
+    // Tampilkan overlay dan aktifkan blur
+    container.classList.add('blur-effect');
+    overlay.classList.add('active');
+
+    const totalDuration = 6000; // Total durasi loading
+
+    // Buat animasi loading
+    const tl = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+    });
+
+    tl.to(".loading", {
+        y: -32,
+        opacity: 1,
+        duration: 1.5,
+        ease: "sine.inOut"
+    }).to(".loading", {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: "sine.inOut"
+    });
+
+    // Hentikan loading setelah durasi selesai
+    setTimeout(() => {
+        tl.kill(); // Hentikan animasi
+        container.classList.remove('blur-effect'); // Hapus blur
+        overlay.classList.remove('active'); // Sembunyikan overlay
+    }, totalDuration);
+}
+
+startAnimation();
