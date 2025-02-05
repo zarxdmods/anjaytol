@@ -611,3 +611,33 @@ function startAnimation() {
         overlay.classList.remove('active'); // Sembunyikan overlay
     }, totalDuration);
 }
+
+
+// Kirim pesanan ke wa
+function sendOrder() {
+    const orderText = cart.map(item => `${item.name} x ${item.quantity}`).join('\n');
+    const phone = "6283830399871"; // Nomor WhatsApp tujuan
+    const url = `https://wa.me/${phone}?text=Pesanan:%0A${encodeURIComponent(orderText)}`;
+    window.open(url, '_blank');
+}
+
+// buka tutup feedback 
+function openFeedback() {
+    document.getElementById('feedbackModal').style.display = 'block';
+}
+
+function closeFeedback() {
+    document.getElementById('feedbackModal').style.display = 'none';
+}
+
+// kirimkan feedback nya
+function sendFeedback() {
+    const feedbackMessage = document.getElementById('feedbackMessage').value;
+    if (feedbackMessage.trim() === "") {
+        alert("Masukkan pesan feedback terlebih dahulu.");
+        return;
+    }
+    const phone = "6283830399871"; // Nomor WhatsApp tujuan
+    const url = `https://wa.me/${phone}?text=Feedback:%0A${encodeURIComponent(feedbackMessage)}`;
+    window.open(url, '_blank');
+}
