@@ -15,6 +15,26 @@ const webD = 'Order Via Website'
 const products = [
     {
         id: 1,
+        name: "capcut pro",
+        price: 10000,
+        image: "https://files.catbox.moe/tdr9lm.jpg",
+        description: "capcut pro, Kualitas Istimewah.",
+        author: "FERPEDIA",
+        features: [
+            "1 BULAN",
+            "SHARING",
+            "Garansi 30 HARI"
+        ],
+        paymentMethods: [
+             {
+               logo: wa,
+               description: waD,
+               link: 'https://wa.me/6283830399871?text=HALLO+MIN+SAYA+INGIN+MEMBELI+BARANG+PANEL'
+            },
+        ]
+    },
+    {
+        id: 2,
         name: "Panel Pterodactyl",
         price: 5000,
         image: "https://telegra.ph/file/1679b6df9fbe3e697c0cf.jpg",
@@ -35,7 +55,7 @@ const products = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         name: "Jasa Pembuatan Website",
         price: 40000,
         image: "https://files.catbox.moe/efogwi.jpg",
@@ -55,7 +75,7 @@ const products = [
         ]
     },
     {
-            id: 3,
+            id: 4,
         name: "Admin Panel",
         price: 15000,
         image: "https://telegra.ph/file/1679b6df9fbe3e697c0cf.jpg",
@@ -75,8 +95,8 @@ const products = [
         ]
     },
     {
-            id: 4,
-        name: "NOMOR KOSONG ( NOKOS )",
+            id: 5,
+        name: "NOKOS",
         price: 5000,
         image: "https://files.catbox.moe/e67688.jpg",
         description: "NOMOR KOSONG NI BERFUNGSI UNTUK KEPERLUAN LAINNYA ATAU BUAT BOT WA.",
@@ -96,7 +116,7 @@ const products = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         name: "SEWA BOT MD",
         price: 10000,
         image: "https://files.catbox.moe/e67688.jpg",
