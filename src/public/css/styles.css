@@ -377,8 +377,8 @@ body {
 /* Styling untuk tombol penutup */
 .close-button {
     /* Mengatur ukuran tombol */
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 
     /* Mengatur warna latar belakang dan warna teks */
     background-color: #ff4d4d; /* Warna merah untuk menandakan aksi "tutup" */
