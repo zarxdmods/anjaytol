@@ -612,6 +612,34 @@ function startAnimation() {
     }, totalDuration);
 }
 
+// Preloader
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});
+
+// Back to Top Button
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopButton = document.querySelector(".back-to-top");
+
+  // Show or hide the button based on scroll position
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "flex";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // Scroll to top when the button is clicked
+  backToTopButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
 
 // Kirim pesanan ke wa
 function sendOrder() {
