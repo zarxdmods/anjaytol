@@ -612,12 +612,12 @@ function startAnimation() {
     }, totalDuration);
 }
 
-// Back to Top Button
+// Script untuk menampilkan/menyembunyikan tombol Back to Top
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.querySelector(".back-to-top");
 
-  // Show or hide the button based on scroll position
-  window.addEventListener("scroll", function () {
+  // Fungsi untuk menampilkan/menyembunyikan tombol
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
       backToTopButton.style.display = "flex";
     } else {
@@ -625,8 +625,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Scroll to top when the button is clicked
-  backToTopButton.addEventListener("click", function (e) {
+  // Fungsi untuk scroll halus ke atas
+  backToTopButton.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
