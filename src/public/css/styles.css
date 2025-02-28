@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 .navbar-brand {
     font-size: 1.5rem; /* Ukuran font */
     font-weight: bold; /* Tebal */
