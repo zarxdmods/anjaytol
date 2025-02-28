@@ -1,31 +1,84 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* Gaya dasar untuk navbar */
+.navbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
 }
 
-body {
-  background-color: black;
-  color: #333;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+/* Gaya untuk brand/logo */
 .navbar-brand {
-    font-size: 1.5rem; /* Ukuran font */
-    font-weight: bold; /* Tebal */
-    text-decoration: none; /* Hilangkan garis bawah */
-    background: linear-gradient(90deg, #ff6a00, #ee0979); /* Gradasi warna */
-    -webkit-background-clip: text; /* Memotong latar belakang untuk teks */
-    -webkit-text-fill-color: transparent; /* Mengisi warna teks dengan transparan */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transisi saat hover */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff !important;
+  transition: color 0.3s ease;
 }
 
-/* Efek hover */
 .navbar-brand:hover {
-    transform: scale(1.1); /* Efek membesar saat hover */
-    color: #fff; /* Ubah warna teks saat hover */
+  color: #ffdd57 !important;
 }
 
+/* Gaya untuk toggler button */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Gaya untuk nav items */
+.navbar-nav {
+  gap: 1rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffdd57 !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Efek underline pada hover */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffdd57;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .nav-item::after {
+    display: none;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #ffff;
