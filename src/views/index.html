@@ -11,19 +11,27 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#">ZARXDMODS</a>
+        <a href="#">Logo</a>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
-        <ul class="navbar-links">
-            <li><a href="#home">Beranda</a></li>
-            <Li><a href="src/views/payment">Payment</a></Li>
-        </ul>
-        <div class="navbar-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>      
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </nav>
+    <div class="menu-mobile" id="menuMobile">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <section id="home">Home Section</section>
+    <section id="about">About Section</section>
+    <section id="contact">Contact Section</section>
 
     <div class="floating-button feedback-button" onclick="openFeedback()">
         &#128172;
