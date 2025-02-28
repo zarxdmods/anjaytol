@@ -663,10 +663,10 @@ function sendFeedback() {
     const url = `https://wa.me/${phone}?text=Feedback:%0A${encodeURIComponent(feedbackMessage)}`;
     window.open(url, '_blank');
 }
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+// Script untuk toggle mobile menu
+const mobileMenu = document.getElementById('mobile-menu');
+const navbarLinks = document.querySelector('.navbar-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
+mobileMenu.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
 });
