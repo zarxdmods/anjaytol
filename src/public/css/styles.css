@@ -1,93 +1,98 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar-logo a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar-links {
-    display: flex;
-    list-style: none;
-}
-
-.navbar-links li {
-    margin-left: 2rem;
-}
-
-.navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #f39c12;
-}
-
-/* Mobile Menu Toggle */
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .navbar-links li {
-        margin: 1rem 0;
-        text-align: center;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #222;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .menu-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            padding: 10px;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .menu-mobile a {
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .menu-mobile a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        #home { background-color: #f4f4f4; }
+        #about { background-color: #ddd; }
+        #contact { background-color: #bbb; }
 
 body {
     font-family: Arial, sans-serif;
