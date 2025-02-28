@@ -1,84 +1,94 @@
-/* Gaya dasar untuk navbar */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
 .navbar {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Gaya untuk brand/logo */
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff !important;
-  transition: color 0.3s ease;
+.navbar-logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.navbar-brand:hover {
-  color: #ffdd57 !important;
+.navbar-links {
+    display: flex;
+    list-style: none;
 }
 
-/* Gaya untuk toggler button */
-.navbar-toggler {
-  border: none;
+.navbar-links li {
+    margin-left: 2rem;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-/* Gaya untuk nav items */
-.navbar-nav {
-  gap: 1rem;
+.navbar-links a:hover {
+    color: #f39c12;
 }
 
-.nav-item {
-  position: relative;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ffdd57 !important;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-/* Efek underline pada hover */
-.nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #ffdd57;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-item:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .navbar-nav {
-    margin-top: 1rem;
-  }
-
-  .nav-item::after {
+/* Mobile Menu Toggle */
+.navbar-toggle {
     display: none;
-  }
-
-  .nav-link {
-    text-align: center;
-  }
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffff;
